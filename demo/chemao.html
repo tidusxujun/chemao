@@ -1,465 +1,465 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <meta charset="UTF-8">
-    <title>Alice 的简单例子</title>
-    <link media="all" href="https://a.alipayobjects.com/alice/one/1.2.2/one-debug.css" rel="stylesheet">
-    <style>
-    	/* 新增支持1200px */
-    	.ui-grid-26 {width:1030px;}
-    	.ui-grid-27 {width:1070px;}
-    	.ui-grid-28 {width:1110px;}
-    	.ui-grid-29 {width:1150px;}
-    	.ui-grid-30 {width:1190px;}
-    	
-    	/* 低分辨率适配 */
-    	@media (max-width: 1189px) {
-			.ui-grid-30, .wrapper{
-			    width:990px !important;
-			}
-			.ui-grid-24{
-				width:750px;
-			}
-		}
-		
-		/* 字体图标 */
-		@font-face {
-		  font-family: 'rei';
-		  src: url('http://at.alicdn.com/t/font_1410525781_7814667.eot'); /* IE9*/
-		  src: url('http://at.alicdn.com/t/font_1410525781_7814667.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-		  url('http://at.alicdn.com/t/font_1410525781_7814667.woff') format('woff'), /* chrome、firefox */
-		  url('http://at.alicdn.com/t/font_1410525781_7814667.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-		  url('http://at.alicdn.com/t/font_1410525781_7814667.svg#iconfont') format('svg'); /* iOS 4.1- */
-		}
+<head>
+  <meta charset="UTF-8">
+  <title>Alice 的简单例子</title>
+  <link media="all" href="https://a.alipayobjects.com/alice/one/1.2.2/one-debug.css" rel="stylesheet">
+  <style>
+  /* 新增支持1200px */
+  .ui-grid-26 {width:1030px;}
+  .ui-grid-27 {width:1070px;}
+  .ui-grid-28 {width:1110px;}
+  .ui-grid-29 {width:1150px;}
+  .ui-grid-30 {width:1190px;}
 
-        /* 通用样式自定义 */
-        .ui-box-head{
-            border-bottom: none;
-            background: inherit;
-            padding: 20px 0 0 10px;
-        }
-        .ui-select-trigger{
-            background: inherit;
-        }
-        .J_save_series, .J_cancel_series, .J_save_series:hover, .J_cancel_series:hover{
-            background: #EE493B;
-            border: none;
-            color: #fff !important;
-            border-radius: 0;
-            padding: 3px 26px;
-        }
-        .J_cancel_series, .J_cancel_series:hover{
-            background: #B5B5B5;
-        }
-        .J_save_series:hover, .J_cancel_series:hover{
-            opacity: 0.8;
-        }
-		
-		/* 车系选择	*/
-        .box-series{
-            width: 816px;
-            position: absolute;
-            margin-top: -1px; 
-            background-color:#fff; 
-        }
-		.allBrand_contain{
-			width: 358px;
-            float: left;
-            display: inline;
-		}
-        .allBrand_contain dl{
-            clear: both;
-            margin-bottom: 15px;
-            display: block;
-        }
-        .allBrand_contain dt{
-            color: #aaa;
-            font-size: 18px;
-            line-height: 18px;
-            width: 16px;
-            margin-right: 10px;
-            float: left;
-        }
-        .allBrand_contain dd{
-            float: left;
-            width: 332px;
-            display: inline;
-        }
-        .allBrand_contain a{
-            float: left;
-            color: #666;
-            font-size: 12px;
-            margin-right: 18px;
-            line-height: 18px;
-        }
-        .selected-series{
-            width: 630px;
-        }
-        .selected-series a{
-            border: solid 2px #eee;
-            padding: 0 6px;
-            color: #666;
-            font-size: 12px;
-            margin: 0 5px 5px 0;
-            display: inline-block;
-        }
-        .selected-series a:hover{
-            text-decoration: none;
-        }
-        .selected-series img{
-            vertical-align: -5px;
-            margin-right: 5px;
-		}
-        .selected-series i{
-            font-size: 16px;
-            margin-left: 5px;
-            cursor: pointer;
-        }
-        .allSeries_contain{
-            position: absolute;
-            top: 20px;
-            z-index: 1;
-            border: solid 1px #ddd;
-            padding: 15px;
-            /*height: 300px;*/
-            overflow-y: auto;
-            background-color:#fff; 
-            display: none;
-        }
-        .allSeries_contain h3{
-            font-size: 15px;
-            color: #FF5719;
-            font-weight: bolder;
-            padding-bottom: 5px;
-        }
-        .allSeries_contain .series-item{
-            position: relative;
-            float: left;
-            text-align: center;
-            height: 73px;
-            margin-bottom: 10px;
-            margin-right: 20px;
-            border: 2px solid #fff;
-            line-height: 20px;
-            cursor: pointer;
-        }
-        .allSeries_contain img {
-            width: 70px;
-            background: #fff;
-            display: block;
-            height: 52px;
-        }
-        .allSeries_contain .series-item:hover{
-            border: solid 2px #eE493b;
-        }
-        .allSeries_contain .series-item.active{
-            border: solid 2px #eE493b;
-        }
-        .allSeries_contain .series-item.active i{
-            width: 17px;
-            height: 17px;
-            position: absolute;
-            right: -2px;
-            top: -2px;
-            display: block;
-            color: #fff;
-            background-color:#eE493b; 
-        }
-        .allSeries_contain .close {
-            font-size: 14px;
-            position: absolute;
-            top: 10px;
-            z-index: 2;
-            right: 15px;
-            cursor: pointer;
-        }
-    	
-    	/* 事例 忽略 */
-        .wrapper {
-            width: 1190px;
-            margin: 0 auto;
-        }
-        .ui-grid-row {
-            margin-bottom: 15px;
-        }
-        
-    </style>
-    </head>
-    <body>
-    <div class="wrapper">
-        <div class="ui-grid-row">
-            <div class="ui-grid-30">
-                <div class="ui-nav">
-                    <ul class="ui-nav-main">
-                        <li class="ui-nav-item">
-                        <a href="#">一级导航 1</a>
-                        <ul class="ui-nav-submain">
-                            <li class="ui-nav-subitem ui-nav-subitem-current"><a href="#">二级导航 1-1</a></li>
-                            <li class="ui-nav-subitem"><a href="#">二级导航 1-2</a></li>
-                            <li class="ui-nav-subitem"><a href="#">二级导航 1-3</a></li>
-                        </ul>
-                        </li>
-                        <li class="ui-nav-item ui-nav-item-current">
-                        <a href="#">一级导航 2</a>
-                        <ul class="ui-nav-submain">
-                            <li class="ui-nav-subitem"><a href="#">二级导航 2-1</a></li>
-                            <li class="ui-nav-subitem ui-nav-subitem-current"><a href="#">二级导航 2-2</a></li>
-                            <li class="ui-nav-subitem"><a href="#">二级导航 2-3</a></li>
-                        </ul>
-                        </li>
-                        <li class="ui-nav-item">
-                        <a href="#">一级导航 3</a>
-                        <ul class="ui-nav-submain">
-                            <li class="ui-nav-subitem"><a href="#">二级导航 3-1</a></li>
-                            <li class="ui-nav-subitem"><a href="#">二级导航 3-2</a></li>
-                            <li class="ui-nav-subitem ui-nav-subitem-current"><a href="#">二级导航 3-3</a></li>
-                        </ul>
-                        </li>
-                        <li class="ui-nav-item"><a href="#">一级导航 4</a></li>
-                    </ul>
-                    <div class="ui-nav-subcontainer"></div>
-                </div>
-            </div>
+  /* 低分辨率适配 */
+  @media (max-width: 1189px) {
+    .ui-grid-30, .wrapper{
+      width:990px !important;
+    }
+    .ui-grid-24{
+      width:750px;
+    }
+  }
+
+  /* 字体图标 */
+  @font-face {
+    font-family: 'rei';
+    src: url('http://at.alicdn.com/t/font_1410525781_7814667.eot'); /* IE9*/
+    src: url('http://at.alicdn.com/t/font_1410525781_7814667.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('http://at.alicdn.com/t/font_1410525781_7814667.woff') format('woff'), /* chrome、firefox */
+    url('http://at.alicdn.com/t/font_1410525781_7814667.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('http://at.alicdn.com/t/font_1410525781_7814667.svg#iconfont') format('svg'); /* iOS 4.1- */
+  }
+
+  /* 通用样式 自定义重置 */
+  .ui-box-head{
+    border-bottom: none;
+    background: inherit;
+    padding: 20px 0 0 10px;
+  }
+  .ui-select-trigger{
+    background: inherit;
+  }
+  .J_save_series, .J_cancel_series, .J_save_series:hover, .J_cancel_series:hover{
+    background: #EE493B;
+    border: none;
+    color: #fff !important;
+    border-radius: 0;
+    padding: 3px 26px;
+  }
+  .J_cancel_series, .J_cancel_series:hover{
+    background: #B5B5B5;
+  }
+  .J_save_series:hover, .J_cancel_series:hover{
+    opacity: 0.8;
+  }
+
+  /* 车系选择	*/
+  .box-series{
+    width: 816px;
+    position: absolute;
+    margin-top: -1px;
+    background-color:#fff;
+  }
+  .allBrand_contain{
+    width: 358px;
+    float: left;
+    display: inline;
+  }
+  .allBrand_contain dl{
+    clear: both;
+    margin-bottom: 15px;
+    display: block;
+  }
+  .allBrand_contain dt{
+    color: #aaa;
+    font-size: 18px;
+    line-height: 18px;
+    width: 16px;
+    margin-right: 10px;
+    float: left;
+  }
+  .allBrand_contain dd{
+    float: left;
+    width: 332px;
+    display: inline;
+  }
+  .allBrand_contain a{
+    float: left;
+    color: #666;
+    font-size: 12px;
+    margin-right: 18px;
+    line-height: 18px;
+  }
+  .selected-series{
+    width: 630px;
+  }
+  .selected-series a{
+    border: solid 2px #eee;
+    padding: 0 6px;
+    color: #666;
+    font-size: 12px;
+    margin: 0 5px 5px 0;
+    display: inline-block;
+  }
+  .selected-series a:hover{
+    text-decoration: none;
+  }
+  .selected-series img{
+    vertical-align: -5px;
+    margin-right: 5px;
+  }
+  .selected-series i{
+    font-size: 16px;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  .allSeries_contain{
+    position: absolute;
+    top: 20px;
+    z-index: 1;
+    border: solid 1px #ddd;
+    padding: 15px;
+    /*height: 300px;*/
+    overflow-y: auto;
+    background-color:#fff;
+    display: none;
+  }
+  .allSeries_contain h3{
+    font-size: 15px;
+    color: #FF5719;
+    font-weight: bolder;
+    padding-bottom: 5px;
+  }
+  .allSeries_contain .series-item{
+    position: relative;
+    float: left;
+    text-align: center;
+    height: 73px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  .allSeries_contain img {
+    width: 70px;
+    background: #fff;
+    display: block;
+    height: 52px;
+  }
+  .allSeries_contain .series-item:hover{
+    border: solid 2px #eE493b;
+  }
+  .allSeries_contain .series-item.active{
+    border: solid 2px #eE493b;
+  }
+  .allSeries_contain .series-item.active i{
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    display: block;
+    color: #fff;
+    background-color:#eE493b;
+  }
+  .allSeries_contain .close {
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+    right: 15px;
+    cursor: pointer;
+  }
+
+  /* 事例 忽略 */
+  .wrapper {
+    width: 1190px;
+    margin: 0 auto;
+  }
+  .ui-grid-row {
+    margin-bottom: 15px;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="ui-grid-row">
+      <div class="ui-grid-30">
+        <div class="ui-nav">
+          <ul class="ui-nav-main">
+            <li class="ui-nav-item">
+              <a href="#">一级导航 1</a>
+              <ul class="ui-nav-submain">
+                <li class="ui-nav-subitem ui-nav-subitem-current"><a href="#">二级导航 1-1</a></li>
+                <li class="ui-nav-subitem"><a href="#">二级导航 1-2</a></li>
+                <li class="ui-nav-subitem"><a href="#">二级导航 1-3</a></li>
+              </ul>
+            </li>
+            <li class="ui-nav-item ui-nav-item-current">
+              <a href="#">一级导航 2</a>
+              <ul class="ui-nav-submain">
+                <li class="ui-nav-subitem"><a href="#">二级导航 2-1</a></li>
+                <li class="ui-nav-subitem ui-nav-subitem-current"><a href="#">二级导航 2-2</a></li>
+                <li class="ui-nav-subitem"><a href="#">二级导航 2-3</a></li>
+              </ul>
+            </li>
+            <li class="ui-nav-item">
+              <a href="#">一级导航 3</a>
+              <ul class="ui-nav-submain">
+                <li class="ui-nav-subitem"><a href="#">二级导航 3-1</a></li>
+                <li class="ui-nav-subitem"><a href="#">二级导航 3-2</a></li>
+                <li class="ui-nav-subitem ui-nav-subitem-current"><a href="#">二级导航 3-3</a></li>
+              </ul>
+            </li>
+            <li class="ui-nav-item"><a href="#">一级导航 4</a></li>
+          </ul>
+          <div class="ui-nav-subcontainer"></div>
         </div>
-        <div class="ui-grid-row">
-            <div class="ui-grid-6">
-                <div class="ui-box">
-                    <div class="ui-box-head">
-                        <div class="ui-box-head-border">
-                            <h3 class="ui-box-head-title">区块标题</h3>
-                            <span class="ui-box-head-text">其他文字</span>
-                            <a href="#" class="ui-box-head-more">更多</a>
-                        </div>
-                    </div>
-                    <div class="ui-box-container">
-                        <div class="ui-box-content">
-                            <ul class="ui-list">
-                                <li class="ui-list-item"><a href="#">如何申请认证？</a></li>
-                                <li class="ui-list-item"><a href="#">如何提现？</a></li>
-                                <li class="ui-list-item"><a href="#">支付宝数字证书有什么作用？</a></li>
-                                <li class="ui-list-item"><a href="#">如何申请认证？</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="ui-grid-24">
-                <div class="ui-tipbox ui-tipbox-success">
-                    <div class="ui-tipbox-icon">
-                        <i class="iconfont" title="成功">&#xF046;</i>
-                    </div>
-                    <div class="ui-tipbox-content">
-                        <h3 class="ui-tipbox-title">成功标题</h3>
-                        <p class="ui-tipbox-explain">完成的说明完成的说明。</p>
-                        <p class="ui-tipbox-explain"><a href="#">查询缴费记录</a> | <a href="#">我的支付宝</a></p>
-                    </div>
-                </div>
-                
-                <!-- 车系选择UI -->
-                <div id="J_selelct_series" class="ui-select" style="width: 120px;margin-top: 20px;">
-
-                    <a href="#" class="ui-select-trigger">
-                        选择车系<i class="iconfont" title="下三角形">&#xe606;</i>
-                    </a>
-
-                    <!-- 选择面板 -->
-                    <div class="ui-box box-series">
-                        <div class="ui-box-head">
-                            <h3 class="ui-box-head-title">所有品牌</h3>
-                        </div>
-                        <div class="ui-box-container">
-                            <div class="ui-box-content fn-clear">
-                                <div class="list_allBrand_wrap fn-clear">
-                                    <div class="allBrand_contain">
-                                        <!-- <dl class="fn-clear"><dt>A</dt><dd><a href=":;">奥迪</a></dd></dl> -->
-                                    </div>
-                                    <div class="allBrand_contain">
-                                        <!-- <dl class="fn-clear"><dt>A</dt><dd><a href=":;">奥迪</a></dd></dl> -->
-                                    </div>
-                                </div>
-                                <div class="allSeries_contain fn-clear">
-                                    <ul>
-                                        <li>
-                                            <!-- <h3>{$keys}</h3> -->
-                                            <!-- <div class="series-item" data-json="{$json}" ><i></i><img src="http://res.souche.com/files/carproduct/series/{$code}">{$name}</div> -->
-                                        </li>
-                                    </ul>
-                                    <i class="iconfont close">&#xe60a;</i>
-                                </div>
-                                <div class="selected-series fn-left">
-                                    <!-- <a href="javascript:;"><img width="32" src="http://res.souche.com/files/carproduct/series/series-2723.png" />X5<i class="iconfont">&#xe609;</i></a> -->
-                                </div>  
-                                <div class="fn-right">
-                                    <a href="javascript:;" class="ui-button ui-button-mwhite J_cancel_series">取消</a> 
-                                    <a href="javascript:;" class="ui-button ui-button-morange J_save_series">确定</a>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end -->
-
-                </div>
-                <!-- end -->
-                
-            </div>
-        </div>
+      </div>
     </div>
-    <script src="http://static.dongdalou.com/v2.1/js/jquery.js" charset="utf-8"></script>
-    <script>
-    
-    	/* 车系选择组件构造 */
-		(function($, W) {
-			if (!$) return;
-			$.fn.extend({
-				SelSeries: function(opts) {
-					var defaults = {
-						url:{
-							brand: 'chemo-brand.js',
-							series: 'chemo-series.js'
-						},
-						maxToken:10,
-						templet: {
-							brand: '<dl class="fn-clear"><dt>{$en}</dt><dd>{$list}</dd></dl>',
-							brandName: '<a href="javascript:;" data-id="{$id}">{$name}</a>',
-							series: '<li class="fn-clear"><h3>{$keys}</h3></li>',
-                            seriesName: '<div class="series-item J_series_key_{$id}" ><i class="iconfont fn-hide">&#xe602;</i><img src="http://res.souche.com/files/carproduct/series/{$code}.png">{$name}</div>',
-							addToken: '<a class="J_series_val_{$id}" href="javascript:;"><img width="32" src="http://res.souche.com/files/carproduct/series/{$code}.png" />{$name}<i class="iconfont">&#xe609;</i></a>'
-						},
-                        cur: this,
-                        box: $('.box-series', this.cur).hide(),
-                        boxSeries: $('.allSeries_contain>ul', this.cur),
-                        boxselected: $('.selected-series', this.cur),
-                        btnSave: $('.J_save_series', this.cur),
-                        btnCancel: $('.J_cancel_series', this.cur)
-					}
-					opts && $.extend(defaults, opts);
-					var os = {
-						init: function() {
-							this.getBrand();
-                            defaults.cur.children('.ui-select-trigger').click(function(e){
-                                defaults.box.slideDown(); return false;
-                            });
-                            defaults.btnSave.click(function(e){
-                                defaults.callback && defaults.callback(os.getData());defaults.box.slideUp();
-                            });
-                            defaults.btnCancel.click(os.cancelSel);
-						},
-						getBrand: function () {
-							$.getJSON(defaults.url.brand, function(result){
-								if(result && result.brandList){
-									var _brandlist = '',
-								        _brandEleArr = $.map(result.brandList, function(n){
-    										if(n['item']){
-    											_brandlist = $.map(n['item'], function(d){
-    												return defaults.templet.brandName.replace('{$name}', d['name']).replace('{$id}', d['id']);
-    											}).join('');
-    										}
-    										return defaults.templet.brand.replace('{$en}', n['en'] || '').replace('{$list}', _brandlist);
-									}),
-                                    _sp = Math.ceil(result.brandList.length/2);
-									$('.allBrand_contain:eq(0)', defaults.cur).html($.grep(_brandEleArr, function(n, i){
-                                        return i<_sp;
-                                    }).join(''));
-                                    $('.allBrand_contain:eq(1)', defaults.cur).html($.grep(_brandEleArr, function(n, i){
-                                        return i>=_sp;
-                                    }).join(''));
-                                    $('.allBrand_contain a', defaults.cur).click(function(e){
-                                        var o = $(this);
-                                        os.getSeries(o.attr('data-id'));
-                                        return false;
-                                    });
-								}
-							});
-						},
-						getSeries: function(id) {
-                            $.getJSON(defaults.url.series, {id:id}, function(result){
-                                if(result && result.keys && result.codes){
-                                    var _seriesList='', 
-                                        _seriesEle = $.map(result.keys, function(n){
-                                            _seriesList = $.map(result.codes[n], function(s){
-                                                return $(defaults.templet.seriesName.replace('{$name}', s['name']).replace('{$code}',s['code']||'').replace('{$id}',s['id'])).data(s).addClass(os.isActive(s['id'])?'active':'');
-                                            });
-                                            return $(defaults.templet.series.replace('{$keys}', n)).append(_seriesList);
-                                    });
-                                    defaults.boxSeries.html(_seriesEle);
-                                    defaults.boxSeries.find('div').click(os.setToken);
-                                    var _brnadEle = $('.list_allBrand_wrap', defaults.cur), _close=_brnadEle.parent().find('.close');
-                                    defaults.boxSeries.parent().width(_brnadEle.width()-30).height(_brnadEle.height()-20).scroll(function(e){
-                                        _close.css('top', $(this).scrollTop()+10);
-                                    }).fadeIn();
-                                    _close.click(function(){$(this).parent().fadeOut()});
-                                }
-                            });
-                        },
-                        setToken: function(e){
-                            var o = $(this),
-                                s = o.data();
-                                t = defaults.templet.addToken.replace('{$name}', s['name']).replace('{$code}',s['code']||'').replace('{$id}',s['id']),
-                                b = o.hasClass('active');
-                            if(b){
-                                os.removeToken(o);
-                            }else{
-                                defaults.boxselected.append($(t).data(s).click(function(e){
-                                    os.removeToken(this);
-                                }));
-                                o.addClass('active');
-                            }
-                            return false;
-                        },
-                        removeToken: function(o){
-                            var id = $(o).data().id;
-                            id && $('.J_series_key_'+id, defaults.cur).removeClass('active') && $('.J_series_val_'+id, defaults.cur).remove();
-                        },
-                        isActive: function(id){
-                            return $('.J_series_val_'+id, defaults.cur).length;
-                        },
-                        getData: function(){
-                            return defaults.boxselected.children().map(function(){
-                                return $(this).data();
-                            });
-                        },
-                        cancelSel: function(e){
-                            defaults.boxselected.children().remove();
-                            defaults.boxSeries.parent().hide();
-                            defaults.box.slideUp();
-                        }
-					}
-					os.init();
-				}
-			});
-		})(jQuery, window);
-		/*	end	*/
-		
-		$(function(){
+    <div class="ui-grid-row">
+      <div class="ui-grid-6">
+        <div class="ui-box">
+          <div class="ui-box-head">
+            <div class="ui-box-head-border">
+              <h3 class="ui-box-head-title">区块标题</h3>
+              <span class="ui-box-head-text">其他文字</span>
+              <a href="#" class="ui-box-head-more">更多</a>
+            </div>
+          </div>
+          <div class="ui-box-container">
+            <div class="ui-box-content">
+              <ul class="ui-list">
+                <li class="ui-list-item"><a href="#">如何申请认证？</a></li>
+                <li class="ui-list-item"><a href="#">如何提现？</a></li>
+                <li class="ui-list-item"><a href="#">支付宝数字证书有什么作用？</a></li>
+                <li class="ui-list-item"><a href="#">如何申请认证？</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui-grid-24">
+        <div class="ui-tipbox ui-tipbox-success">
+          <div class="ui-tipbox-icon">
+            <i class="iconfont" title="成功">&#xF046;</i>
+          </div>
+          <div class="ui-tipbox-content">
+            <h3 class="ui-tipbox-title">成功标题</h3>
+            <p class="ui-tipbox-explain">完成的说明完成的说明。</p>
+            <p class="ui-tipbox-explain"><a href="#">查询缴费记录</a> | <a href="#">我的支付宝</a></p>
+          </div>
+        </div>
 
-            //组件初始化
-			$('#J_selelct_series').SelSeries(
-                {   
-                    url:{
-                        brand: 'chemo-brand.js?v=1',    //获取品牌json的URL
-                        series: 'chemo-series.js?v=1'       //根据品牌ID获取车系json的URL
-                    },
-                    callback:function(result){
-                        // //回调函数，返回选中值JSON对象，详情见chemo-series.js
-                        // {
-                        //     "name": "A3",
-                        //     "id": "RU64YW3",
-                        //     "type": "car-subdivision",
-                        //     "level": "series",
-                        //     "enName": "A3",
-                        //     "dindex": 5170,
-                        //     "extString": "{series_type=null, 58code=null, price=null, chetixinshi=null, hide=null, vehicle_type=null, synonym=null, 51code=null, factory=一汽奥迪, 168code=null, inlet=null, relate_series=null}",
-                        //     "code": "series-5009-ly",
-                        //     "updateDate": "2014-07-01 00:00:00",
-                        //     "check": null
-                        // }
-                        result && alert('id:'+result[0]['id']+'\r\nname:'+result[0]['name']);
-        				console.log(result);
-			        }
-                }
-            );
-    	});
-    </script>
-    
-    </body>
+        <!-- 车系选择UI -->
+        <div id="J_selelct_series" class="ui-select" style="width: 120px;margin-top: 20px;">
+
+          <a href="#" class="ui-select-trigger">
+            选择车系<i class="iconfont" title="下三角形">&#xe606;</i>
+          </a>
+
+          <!-- 选择面板 -->
+          <div class="ui-box box-series">
+            <div class="ui-box-head">
+              <h3 class="ui-box-head-title">所有品牌</h3>
+            </div>
+            <div class="ui-box-container">
+              <div class="ui-box-content fn-clear">
+                <div class="list_allBrand_wrap fn-clear">
+                  <div class="allBrand_contain">
+                    <!-- <dl class="fn-clear"><dt>A</dt><dd><a href=":;">奥迪</a></dd></dl> -->
+                  </div>
+                  <div class="allBrand_contain">
+                    <!-- <dl class="fn-clear"><dt>A</dt><dd><a href=":;">奥迪</a></dd></dl> -->
+                  </div>
+                </div>
+                <div class="allSeries_contain fn-clear">
+                  <ul>
+                    <li>
+                      <!-- <h3>{$keys}</h3> -->
+                      <!-- <div class="series-item" data-json="{$json}" ><i></i><img src="http://res.souche.com/files/carproduct/series/{$code}">{$name}</div> -->
+                    </li>
+                  </ul>
+                  <i class="iconfont close">&#xe60a;</i>
+                </div>
+                <div class="selected-series fn-left">
+                  <!-- <a href="javascript:;"><img width="32" src="http://res.souche.com/files/carproduct/series/series-2723.png" />X5<i class="iconfont">&#xe609;</i></a> -->
+                </div>
+                <div class="fn-right">
+                  <a href="javascript:;" class="ui-button ui-button-mwhite J_cancel_series">取消</a>
+                  <a href="javascript:;" class="ui-button ui-button-morange J_save_series">确定</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end -->
+
+        </div>
+        <!-- end -->
+
+      </div>
+    </div>
+  </div>
+  <script src="http://static.dongdalou.com/v2.1/js/jquery.js" charset="utf-8"></script>
+  <script>
+
+  /* 车系选择组件构造 */
+  (function($, W) {
+    if (!$) return;
+    $.fn.extend({
+      SelSeries: function(opts) {
+        var defaults = {
+          url:{
+            brand: 'chemo-brand.js',
+            series: 'chemo-series.js'
+          },
+          maxToken:10,
+          templet: {
+            brand: '<dl class="fn-clear"><dt>{$en}</dt><dd>{$list}</dd></dl>',
+            brandName: '<a href="javascript:;" data-id="{$id}">{$name}</a>',
+            series: '<li class="fn-clear"><h3>{$keys}</h3></li>',
+            seriesName: '<div class="series-item J_series_key_{$id}" ><i class="iconfont fn-hide">&#xe602;</i><img src="http://res.souche.com/files/carproduct/series/{$code}.png">{$name}</div>',
+            addToken: '<a class="J_series_val_{$id}" href="javascript:;"><img width="32" src="http://res.souche.com/files/carproduct/series/{$code}.png" />{$name}<i class="iconfont">&#xe609;</i></a>'
+          },
+          cur: this,
+          box: $('.box-series', this.cur).hide(),
+          boxSeries: $('.allSeries_contain>ul', this.cur),
+          boxselected: $('.selected-series', this.cur),
+          btnSave: $('.J_save_series', this.cur),
+          btnCancel: $('.J_cancel_series', this.cur)
+        }
+        opts && $.extend(defaults, opts);
+        var os = {
+          init: function() {
+            this.getBrand();
+            defaults.cur.children('.ui-select-trigger').click(function(e){
+              defaults.box.slideDown(); return false;
+            });
+            defaults.btnSave.click(function(e){
+              defaults.callback && defaults.callback(os.getData());defaults.box.slideUp();
+            });
+            defaults.btnCancel.click(os.cancelSel);
+          },
+          getBrand: function () {
+            $.getJSON(defaults.url.brand, function(result){
+              if(result && result.brandList){
+                var _brandlist = '',
+                _brandEleArr = $.map(result.brandList, function(n){
+                  if(n['item']){
+                    _brandlist = $.map(n['item'], function(d){
+                      return defaults.templet.brandName.replace('{$name}', d['name']).replace('{$id}', d['id']);
+                    }).join('');
+                  }
+                  return defaults.templet.brand.replace('{$en}', n['en'] || '').replace('{$list}', _brandlist);
+                }),
+                _sp = Math.ceil(result.brandList.length/2);
+                $('.allBrand_contain:eq(0)', defaults.cur).html($.grep(_brandEleArr, function(n, i){
+                  return i<_sp;
+                }).join(''));
+                $('.allBrand_contain:eq(1)', defaults.cur).html($.grep(_brandEleArr, function(n, i){
+                  return i>=_sp;
+                }).join(''));
+                $('.allBrand_contain a', defaults.cur).click(function(e){
+                  var o = $(this);
+                  os.getSeries(o.attr('data-id'));
+                  return false;
+                });
+              }
+            });
+          },
+          getSeries: function(id) {
+            $.getJSON(defaults.url.series, {id:id}, function(result){
+              if(result && result.keys && result.codes){
+                var _seriesList='',
+                _seriesEle = $.map(result.keys, function(n){
+                  _seriesList = $.map(result.codes[n], function(s){
+                    return $(defaults.templet.seriesName.replace('{$name}', s['name']).replace('{$code}',s['code']||'').replace('{$id}',s['id'])).data(s).addClass(os.isActive(s['id'])?'active':'');
+                  });
+                  return $(defaults.templet.series.replace('{$keys}', n)).append(_seriesList);
+                });
+                defaults.boxSeries.html(_seriesEle);
+                defaults.boxSeries.find('div').click(os.setToken);
+                var _brnadEle = $('.list_allBrand_wrap', defaults.cur), _close=_brnadEle.parent().find('.close');
+                defaults.boxSeries.parent().width(_brnadEle.width()-30).height(_brnadEle.height()-20).scroll(function(e){
+                  _close.css('top', $(this).scrollTop()+10);
+                }).fadeIn();
+                _close.click(function(){$(this).parent().fadeOut()});
+              }
+            });
+          },
+          setToken: function(e){
+            var o = $(this),
+            s = o.data();
+            t = defaults.templet.addToken.replace('{$name}', s['name']).replace('{$code}',s['code']||'').replace('{$id}',s['id']),
+            b = o.hasClass('active');
+            if(b){
+              os.removeToken(o);
+            }else{
+              defaults.boxselected.append($(t).data(s).click(function(e){
+                os.removeToken(this);
+              }));
+              o.addClass('active');
+            }
+            return false;
+          },
+          removeToken: function(o){
+            var id = $(o).data().id;
+            id && $('.J_series_key_'+id, defaults.cur).removeClass('active') && $('.J_series_val_'+id, defaults.cur).remove();
+          },
+          isActive: function(id){
+            return $('.J_series_val_'+id, defaults.cur).length;
+          },
+          getData: function(){
+            return defaults.boxselected.children().map(function(){
+              return $(this).data();
+            });
+          },
+          cancelSel: function(e){
+            defaults.boxselected.children().remove();
+            defaults.boxSeries.parent().hide();
+            defaults.box.slideUp();
+          }
+        }
+        os.init();
+      }
+    });
+  })(jQuery, window);
+  /*	end	*/
+
+  $(function(){
+
+    //组件初始化
+    $('#J_selelct_series').SelSeries(
+      {
+        url:{
+          brand: 'chemo-brand.js?v=1',    //获取品牌json的URL
+          series: 'chemo-series.js?v=1'       //根据品牌ID获取车系json的URL
+        },
+        callback:function(result){
+          // //回调函数，返回选中值JSON对象，详情见chemo-series.js
+          // {
+          //     "name": "A3",
+          //     "id": "RU64YW3",
+          //     "type": "car-subdivision",
+          //     "level": "series",
+          //     "enName": "A3",
+          //     "dindex": 5170,
+          //     "extString": "{series_type=null, 58code=null, price=null, chetixinshi=null, hide=null, vehicle_type=null, synonym=null, 51code=null, factory=一汽奥迪, 168code=null, inlet=null, relate_series=null}",
+          //     "code": "series-5009-ly",
+          //     "updateDate": "2014-07-01 00:00:00",
+          //     "check": null
+          // }
+          result && alert('id:'+result[0]['id']+'\r\nname:'+result[0]['name']);
+          console.log(result);
+        }
+      }
+    );
+  });
+  </script>
+
+</body>
 </html>
