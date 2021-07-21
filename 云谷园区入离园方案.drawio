@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-21T14:11:47.119Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="ZUV6czG6D-EafuLy591-" version="14.9.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-21T14:14:53.171Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="yZc00yqDjRG3DenhWBcO" version="14.9.0" type="github">
   <diagram name="Page-1" id="12e1b939-464a-85fe-373e-61e167be1490">
     <mxGraphModel dx="1384" dy="761" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
@@ -29,7 +29,7 @@
           <mxGeometry x="596" y="425" width="280" height="60" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-19" value="家长将幼儿送至四号门门厅，孩子排队晨检（家长不入园，需等待孩子完成晨检后离园）" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=0;fontSize=16;fontColor=#FFFFFF;" parent="1" vertex="1">
-          <mxGeometry x="344" y="711" width="224" height="90" as="geometry" />
+          <mxGeometry x="344" y="720" width="224" height="90" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-20" value="" style="line;strokeWidth=2;html=1;rounded=0;shadow=0;fontSize=27;align=center;fillColor=none;strokeColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="616" y="485" width="240" height="10" as="geometry" />
@@ -50,7 +50,7 @@
           <mxGeometry x="876" y="425" width="280" height="60" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-26" value="家长（完成人脸识别录入，一名幼儿可对应四位成人）通过立方门禁、刷脸进入园内，到亲亲时光门口按指定位置排队接幼儿。" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=0;fontSize=16;fontColor=#FFFFFF;" parent="1" vertex="1">
-          <mxGeometry x="896" y="711" width="233" height="90" as="geometry" />
+          <mxGeometry x="896" y="717.5" width="233" height="90" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-27" value="" style="line;strokeWidth=2;html=1;rounded=0;shadow=0;fontSize=27;align=center;fillColor=none;strokeColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="896" y="485" width="240" height="10" as="geometry" />
@@ -71,7 +71,7 @@
           <mxGeometry x="1156" y="425" width="280" height="60" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-33" value="在老师的带领下到指定位置排队等待，教师确认家长身份，将幼儿交给家长，家长带领幼儿刷脸离校" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=0;fontSize=16;fontColor=#FFFFFF;" parent="1" vertex="1">
-          <mxGeometry x="1176" y="715" width="220" height="90" as="geometry" />
+          <mxGeometry x="1183" y="720" width="220" height="90" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-34" value="" style="line;strokeWidth=2;html=1;rounded=0;shadow=0;fontSize=27;align=center;fillColor=none;strokeColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="1176" y="485" width="240" height="10" as="geometry" />
@@ -89,7 +89,7 @@
           <mxGeometry x="1379" y="545" width="115" height="115" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-4" value="保健医生为幼儿晨检后，带领幼儿大屏测温刷脸入园。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=0;fontSize=16;fontColor=#FFFFFF;" parent="1" vertex="1">
-          <mxGeometry x="628" y="711" width="220" height="85" as="geometry" />
+          <mxGeometry x="626" y="720" width="220" height="85" as="geometry" />
         </mxCell>
         <mxCell id="P4Dt11lqXu37a2yWfaih-5" value="&lt;h1&gt;备注：&lt;/h1&gt;&lt;div&gt;孩子：入离园（大屏测温设备）&lt;/div&gt;家长：入离&lt;span&gt;园使用立方门禁（刷脸）&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=16;align=left;fontColor=#FF8000;" parent="1" vertex="1">
           <mxGeometry x="326" y="860" width="344" height="140" as="geometry" />
