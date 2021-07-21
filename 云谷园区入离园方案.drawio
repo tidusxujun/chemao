@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-21T14:28:10.511Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="_2FNr57DcJjp9h636ZWC" version="14.9.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-21T14:30:56.310Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="9DnqcWGyyWjdB52x7GWe" version="14.9.0" type="github">
   <diagram name="Page-1" id="12e1b939-464a-85fe-373e-61e167be1490">
     <mxGraphModel dx="1384" dy="761" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
@@ -92,7 +92,7 @@
           <mxGeometry x="626" y="720" width="220" height="85" as="geometry" />
         </mxCell>
         <mxCell id="P4Dt11lqXu37a2yWfaih-5" value="&lt;h1&gt;备注：&lt;/h1&gt;&lt;div&gt;孩子：入离园（大屏测温）&lt;/div&gt;家长：入离&lt;span&gt;园（门禁刷脸）&lt;br&gt;离园：门禁会一进一出，出是常开或自动开模式&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=16;align=left;fontColor=#FF8000;" parent="1" vertex="1">
-          <mxGeometry x="326" y="860" width="416" height="144" as="geometry" />
+          <mxGeometry x="326" y="860" width="416" height="141" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
