@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-21T14:16:29.834Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="ZlwwVTHdEDxpX5OMjAy7" version="14.9.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-21T14:18:00.619Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" etag="iEbvsU4bcIGbSCwtIAyL" version="14.9.0" type="github">
   <diagram name="Page-1" id="12e1b939-464a-85fe-373e-61e167be1490">
     <mxGraphModel dx="1384" dy="761" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
@@ -91,7 +91,7 @@
         <mxCell id="60da8b9f42644d3a-4" value="保健医生为幼儿晨检后，带领幼儿大屏测温刷脸入园。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=0;fontSize=16;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="626" y="720" width="220" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="P4Dt11lqXu37a2yWfaih-5" value="&lt;h1&gt;备注：&lt;/h1&gt;&lt;div&gt;孩子：入离园（大屏测温设备）&lt;/div&gt;家长：入离&lt;span&gt;园（门禁刷脸）&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=16;align=left;fontColor=#FF8000;" parent="1" vertex="1">
+        <mxCell id="P4Dt11lqXu37a2yWfaih-5" value="&lt;h1&gt;备注：&lt;/h1&gt;&lt;div&gt;孩子：入离园（大屏测温）&lt;/div&gt;家长：入离&lt;span&gt;园（门禁刷脸）&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=16;align=left;fontColor=#FF8000;" parent="1" vertex="1">
           <mxGeometry x="326" y="860" width="344" height="140" as="geometry" />
         </mxCell>
       </root>
