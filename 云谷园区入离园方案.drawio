@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-22T00:52:07.592Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36" etag="73J9DGu7Kz7qA9pz5Wyt" version="14.9.1" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-22T01:00:02.666Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36" etag="4r1wfoRxp5yDQcR1Woxn" version="14.9.1" type="github">
   <diagram name="Page-1" id="12e1b939-464a-85fe-373e-61e167be1490">
     <mxGraphModel dx="1172" dy="727" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
@@ -91,8 +91,8 @@
         <mxCell id="60da8b9f42644d3a-4" value="保健医生为幼儿晨检后，值日老师引导幼儿大屏测温刷脸入园。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=0;fontSize=16;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="626" y="720" width="220" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="P4Dt11lqXu37a2yWfaih-5" value="&lt;h1&gt;备注：&lt;/h1&gt;&lt;div&gt;孩子：入离园（大屏测温）&lt;/div&gt;家长：入离&lt;span&gt;园（门禁刷脸）&lt;br&gt;离园：门禁会一进一出，出是常开或自动开模式&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=16;align=left;fontColor=#FF8000;" parent="1" vertex="1">
-          <mxGeometry x="326" y="860" width="416" height="141" as="geometry" />
+        <mxCell id="P4Dt11lqXu37a2yWfaih-5" value="&lt;h1&gt;备注：&lt;/h1&gt;&lt;div&gt;孩子：入离园（大屏测温）&lt;/div&gt;家长：入离&lt;span&gt;园（门禁刷脸）&lt;br&gt;离园：门禁会一进一出，出是常开或自动开模式&lt;br&gt;人脸：钉钉 &amp;gt; 智慧云谷 &amp;gt; 认真生活 &amp;gt; 人脸管理：新增更换人脸（开学前完成测试上线）&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=16;align=left;fontColor=#FF8000;" parent="1" vertex="1">
+          <mxGeometry x="326" y="860" width="639" height="166" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
