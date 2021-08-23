@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-08-16T03:10:08.798Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36" etag="BsUm6_PCbSCTbcXaZS8f" version="14.9.1" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-23T16:10:20.619Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="e2ozZLohcPv-abA3qUqJ" version="14.9.8" type="github">
   <diagram name="Page-1" id="12e1b939-464a-85fe-373e-61e167be1490">
-    <mxGraphModel dx="1412" dy="727" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1911" dy="895" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -44,13 +44,13 @@
           <mxGeometry x="686" y="573" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-24" value="" style="whiteSpace=wrap;html=1;rounded=1;shadow=0;strokeWidth=8;fontSize=20;align=center;fillColor=#FFB001;strokeColor=#FFFFFF;" parent="1" vertex="1">
-          <mxGeometry x="876" y="405" width="280" height="430" as="geometry" />
+          <mxGeometry x="976" y="405" width="280" height="430" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-25" value="家长来接" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;fontSize=27;fontColor=#FFFFFF;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="876" y="425" width="280" height="60" as="geometry" />
+          <mxGeometry x="976" y="425" width="280" height="60" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-26" value="家长（完成人脸识别录入，一名幼儿可对应四位成人）通过立方门禁、刷脸进入园内，到亲亲时光门口按指定位置排队接幼儿。" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=0;fontSize=16;fontColor=#FFFFFF;" parent="1" vertex="1">
-          <mxGeometry x="896" y="717.5" width="233" height="90" as="geometry" />
+          <mxGeometry x="996" y="717.5" width="233" height="90" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-27" value="" style="line;strokeWidth=2;html=1;rounded=0;shadow=0;fontSize=27;align=center;fillColor=none;strokeColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="896" y="485" width="240" height="10" as="geometry" />
@@ -62,37 +62,40 @@
           <mxGeometry x="819" y="545" width="115" height="115" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-30" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.stylisedArrow;dy=0.6;dx=40;notch=15;feather=0.4;rounded=0;strokeWidth=1;fontSize=27;strokeColor=none;fillColor=#fff2cc;" parent="1" vertex="1">
-          <mxGeometry x="966" y="573" width="100" height="60" as="geometry" />
+          <mxGeometry x="1066" y="573" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-31" value="" style="whiteSpace=wrap;html=1;rounded=1;shadow=0;strokeWidth=8;fontSize=20;align=center;fillColor=#FE9900;strokeColor=#FFFFFF;" parent="1" vertex="1">
-          <mxGeometry x="1156" y="405" width="280" height="430" as="geometry" />
+          <mxGeometry x="1256" y="405" width="280" height="430" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-32" value="幼儿离园" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;shadow=0;fontSize=27;fontColor=#FFFFFF;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="1156" y="425" width="280" height="60" as="geometry" />
+          <mxGeometry x="1256" y="425" width="280" height="60" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-33" value="在老师的带领下到指定位置排队等待，教师确认家长身份，将幼儿交给家长，家长引导幼儿刷脸离校" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=0;fontSize=16;fontColor=#FFFFFF;" parent="1" vertex="1">
-          <mxGeometry x="1183" y="720" width="220" height="90" as="geometry" />
+          <mxGeometry x="1283" y="720" width="220" height="90" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-34" value="" style="line;strokeWidth=2;html=1;rounded=0;shadow=0;fontSize=27;align=center;fillColor=none;strokeColor=#FFFFFF;" parent="1" vertex="1">
-          <mxGeometry x="1176" y="485" width="240" height="10" as="geometry" />
+          <mxGeometry x="1276" y="485" width="240" height="10" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-35" value="" style="line;strokeWidth=2;html=1;rounded=0;shadow=0;fontSize=27;align=center;fillColor=none;strokeColor=#FFFFFF;" parent="1" vertex="1">
-          <mxGeometry x="1176" y="705" width="240" height="10" as="geometry" />
+          <mxGeometry x="1276" y="705" width="240" height="10" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-36" value="门禁刷脸" style="ellipse;whiteSpace=wrap;html=1;rounded=0;shadow=0;strokeWidth=6;fontSize=16;align=center;fillColor=#68B85C;strokeColor=#FFFFFF;fontColor=#FFFFFF;" parent="1" vertex="1">
-          <mxGeometry x="1099" y="545" width="115" height="115" as="geometry" />
+          <mxGeometry x="938" y="544" width="115" height="115" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-37" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.stylisedArrow;dy=0.6;dx=40;notch=15;feather=0.4;rounded=0;strokeWidth=1;fontSize=27;strokeColor=none;fillColor=#fff2cc;" parent="1" vertex="1">
-          <mxGeometry x="1246" y="573" width="100" height="60" as="geometry" />
+          <mxGeometry x="1356" y="573" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-38" value="大屏刷脸" style="ellipse;whiteSpace=wrap;html=1;rounded=0;shadow=0;strokeWidth=6;fontSize=16;align=center;fillColor=#BF639A;strokeColor=#FFFFFF;fontColor=#FFFFFF;" parent="1" vertex="1">
-          <mxGeometry x="1379" y="545" width="115" height="115" as="geometry" />
+          <mxGeometry x="1199" y="544" width="115" height="115" as="geometry" />
         </mxCell>
         <mxCell id="60da8b9f42644d3a-4" value="保健医生为幼儿晨检后，值日老师引导幼儿大屏测温刷脸入园。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=0;fontSize=16;fontColor=#FFFFFF;" parent="1" vertex="1">
           <mxGeometry x="626" y="720" width="220" height="85" as="geometry" />
         </mxCell>
         <mxCell id="P4Dt11lqXu37a2yWfaih-5" value="&lt;h1&gt;备注：&lt;/h1&gt;&lt;div&gt;孩子：入离园（大屏测温）&lt;/div&gt;家长：入离&lt;span&gt;园（门禁刷脸）&lt;br&gt;离园：门禁会一进一出，出是常开或自动开模式&lt;br&gt;人脸：钉钉 &amp;gt; 智慧云谷 &amp;gt; 认真生活 &amp;gt; 人脸管理：新增更换人脸（开学前完成测试上线）&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=16;align=left;fontColor=#FF8000;" parent="1" vertex="1">
           <mxGeometry x="326" y="860" width="639" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="71cEMVszti5T5iJ1b3Dp-3" value="安全离校" style="ellipse;whiteSpace=wrap;html=1;rounded=0;shadow=0;strokeWidth=6;fontSize=16;align=center;fillColor=#BFB4A9;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1474" y="544" width="115" height="115" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
